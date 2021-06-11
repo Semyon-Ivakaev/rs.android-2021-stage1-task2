@@ -4,6 +4,13 @@ class Abbreviation {
 
     // TODO: Complete the following function
     fun abbreviationFromA(a: String, b: String): String {
-        throw NotImplementedError("Not implemented")
+        var result = ""
+        val aArray = a.toUpperCase().toCharArray()
+
+        for (el in aArray) {
+            if (b.contains(el)) result += el
+        }
+
+        return if (result == b) "YES" else "NO"
     }
 }
